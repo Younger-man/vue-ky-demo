@@ -1,0 +1,132 @@
+body {
+  font-family: '微软雅黑', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input:disabled {
+  background-color: transparent;
+}
+
+.view {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* links */
+
+a {
+  cursor: pointer;
+}
+
+a:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+a:visited,
+a:hover,
+a:active,
+a {
+  text-decoration: none;
+}
+
+/* utils */
+
+.clear-float:before {
+  clear: both;
+}
+
+.hide {
+  display: none !important;
+}
+
+.visibility-hide {
+  visibility: hidden;
+}
+
+.bg-contain {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.line {
+  height: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.flex-not-shrink {
+  flex-shrink: 0;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.height100 {
+  height: 100%;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.transform-v-center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.transform-h-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.transform-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scroll-container {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* ring-list */
+
+.ring-list {
+  margin: 0 14px;
+}

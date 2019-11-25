@@ -1,0 +1,180 @@
+@import '~@/css/variables.less';
+
+[retina] {
+  position: relative;
+}
+
+[retina]::before {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  content: ' ';
+}
+
+/* 设备像素比为 1 */
+@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-pixel-ratio: 1) {
+  [retina]::before {
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transform-origin: 0 0;
+  }
+
+  [retina='line-bottom']::before {
+    height: 1px;
+  }
+
+  [retina='line-top']::before {
+    height: 1px;
+  }
+
+  [retina='line-left']::before {
+    width: 1px;
+  }
+
+  [retina='rect-input']::before {
+    border-width: 1px;
+  }
+}
+
+/* 设备像素比为 1.5 */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  [retina]::before {
+    width: 150%;
+    height: 150%;
+    font-size: 30px;
+    transform: scale(0.666667);
+    transform-origin: 0 0;
+  }
+
+  [retina='line-bottom']::before {
+    height: 1px;
+  }
+
+  [retina='line-top']::before {
+    height: 1px;
+  }
+
+  [retina='line-left']::before {
+    width: 1px;
+  }
+
+  [retina='rect-input']::before {
+    border-width: 1px;
+  }
+
+  [retina='rect-input']::before {
+    border-width: 1px;
+  }
+}
+
+/* 设备像素比为 2 */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  [retina]::before {
+    width: 200%;
+    height: 200%;
+    font-size: 40px;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+
+  [retina='line-bottom']::before {
+    height: 1px;
+  }
+
+  [retina='line-top']::before {
+    height: 1px;
+  }
+
+  [retina='line-left']::before {
+    width: 1px;
+  }
+
+  [retina='rect-input']::before {
+    border-width: 1px;
+  }
+}
+
+/* 设备像素比为 3 */
+@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {
+  [retina]::before {
+    width: 300%;
+    height: 300%;
+    font-size: 60px;
+    transform: scale(0.333333);
+    transform-origin: 0 0;
+  }
+
+  [retina='line-bottom']::before {
+    height: 2px;
+  }
+
+  [retina='line-top']::before {
+    height: 2px;
+  }
+
+  [retina='line-left']::before {
+    width: 2px;
+  }
+
+  [retina='rect-input']::before {
+    border-width: 2px;
+  }
+}
+
+/* 设备像素比为 4 */
+@media only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-device-pixel-ratio: 4) {
+  [retina]::before {
+    width: 400%;
+    height: 400%;
+    font-size: 80px;
+    transform: scale(0.25);
+    transform-origin: 0 0;
+  }
+
+  [retina='line-bottom']::before {
+    height: 2px;
+  }
+
+  [retina='line-top']::before {
+    height: 2px;
+  }
+
+  [retina='line-left']::before {
+    width: 2px;
+  }
+
+  [retina='rect-input']::before {
+    border-width: 2px;
+  }
+}
+
+[retina='line-bottom']::before {
+  bottom: 0;
+  left: 0;
+  background-color: @border-color;
+  transform-origin: 0 100%;
+}
+
+[retina='line-top']::before {
+  top: 0;
+  left: 0;
+  background-color: @border-color;
+}
+
+[retina='line-left']::before {
+  top: 0;
+  left: 0;
+  background-color: @border-color;
+}
+
+[retina='rect-input']::before {
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  border-color: #b2b2b2;
+  border-style: solid;
+  border-radius: 1em;
+}

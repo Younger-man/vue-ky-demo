@@ -1,0 +1,58 @@
+@import '~@/css/variables.less';
+
+.rights {
+  position: relative;
+  padding-top: 10px;
+  padding-left: 20px;
+  text-align: left;
+  .flex-row {
+    margin-top: 10px;
+  }
+  &::before {
+    position: absolute;
+    width: 6px;
+    height: 14px;
+    margin-top: 8px;
+    background: @main-color;
+    border-radius: 3px;
+    content: '';
+  }
+  .title {
+    height: 30px;
+    margin-left: 13px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .ring,
+  .music,
+  .gift {
+    width: 36px;
+    height: 36px;
+  }
+  .ring {
+    background-image: url(~@/images/ring.png);
+  }
+  .music {
+    background-image: url(~@/images/music.png);
+  }
+  .gift {
+    background-image: url(~@/images/gift.png);
+  }
+
+  .right-container {
+    width: 100%;
+    margin-left: 13px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid @border-color-light;
+    .right {
+      font-size: 14px;
+    }
+    .desc {
+      color: @detail-color;
+      font-size: 13px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<script>
+  window.ordersdkHostUrl = "//h5.kuyin123.com";
+  window.env = 'prod';
+  window.globalChannelConfig = {{{ channelConfig }}} || ({ config: {} });
+
+  !function (e, n, t, a, s, u, c, m) {
+    e[a] ? e[a].queueName = u : e[a] = {
+      queueName: u
+    }, e[u] = e[u] || function () {
+      (e[u].q = e[u].q || []).push(arguments)
+    }, e[a].l = 1 * new Date, c = n.createElement(t), m = n.getElementsByTagName(t)[0], c.async = 1, c.src = s, m.parentNode.insertBefore(c, m)
+  }(window, document, "script", "_webAnalyst", '//s1.voicecloud.cn/resources/anls/wa.js', "_wa");
+  _wa('*', 'set', 'site', `${globalChannelConfig.config.cloudStatisticCode}`);
+</script>

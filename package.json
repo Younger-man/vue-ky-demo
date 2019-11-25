@@ -1,0 +1,59 @@
+{
+  "name": "iosh5",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vue-cli-service serve --open",
+    "build:test": "vue-cli-service build --environment=test",
+    "build:prod": "vue-cli-service build --environment=production",
+    "lint-staged": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && lint-staged"
+    }
+  },
+  "dependencies": {
+    "@ring-order/lib": "^2.0.10",
+    "@ring-order/sdk": "^2.0.14",
+    "axios": "^0.19.0",
+    "core-js": "^2.6.5",
+    "soundmanager2": "^2.97.20170602",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.9.0",
+    "@vue/cli-plugin-eslint": "^3.9.0",
+    "@vue/cli-service": "^3.9.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "husky": "^3.0.0",
+    "kuyin-webpack-plugins": "^1.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^9.2.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "stylelint": "^10.1.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-order": "^3.0.0",
+    "stylelint-performance-animation": "^1.2.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.{css,vue,less}": [
+      "stylelint --fix",
+      "git add"
+    ]
+  }
+}
